@@ -1,0 +1,32 @@
+.navbar-brand {
+  font-size: 34px;
+  padding-right: 2cm;
+}
+
+.nav-link {
+  font-size: 20px;
+}
+
+.navbar-nav > li > a {
+   line-height: 50px;
+}
+
+.form-inline {
+  line-height: 50px;
+}
+
+.row {
+  margin: : 35px;
+}
+
+.item {
+  background-color: white;
+}
+
+.text {
+  color: black;
+}
+
+.input-group {
+    padding-bottom: 35px;
+}
