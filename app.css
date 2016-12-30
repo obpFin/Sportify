@@ -16,7 +16,7 @@
 }
 
 .row {
-  margin: : 35px;
+  margin: 35px;
 }
 
 .item {
@@ -29,4 +29,22 @@
 
 .input-group {
     padding-bottom: 35px;
+}
+
+.well {
+  background-image: url('pexels-photo-clock.jpg');
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size: cover;
+  border-radius: 5%;
+  padding: 20px;
+  height: 150px;
+}
+
+.total {
+  font-size: 38px;
+}
+
+.weekly-results {
+  font-size: 20px;
 }
