@@ -40,14 +40,14 @@ body {
 }
 
 .left-col {
-  background-image: url('pexels-photo-clock.jpg');
+
   background-repeat:no-repeat;
   background-position:center;
   background-size: cover;
   border-radius: 25px;
   padding: 20px;
   height: 150px;
-  color:white;
+  background-color:black;
 }
 
 .text-prim {
@@ -65,11 +65,8 @@ body {
   background-color: black;
   padding: 20px;
   font-size: 32px;
-
-
 }
-
 .canvas-photo {
   width: 100%; display: block;
-  max-height: 30%;
+  max-height: 100px;
 }
