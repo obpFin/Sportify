@@ -15,4 +15,11 @@ public class AppController {
 
         return "index";
     }
+
+    @RequestMapping("/login")
+    public String login() {
+
+
+        return "login";
+    }
 }

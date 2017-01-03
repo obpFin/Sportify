@@ -1,17 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-  <head>
-  <title>Sportify</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
-    <link href="../static/css/app.css"
-          th:href="@{css/app.css}" rel="stylesheet" media="screen"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous"/>
-  </head>
-  <body class="bg-info text-white">
+<head th:replace="layout :: head('login')">
+</head>
+ <body>
+ <nav th:replace="layout :: nav"></nav>
+ <div class="bg-info text-white">
   <div class="container text-xs-center">
-    <h1 class="display-1 mt-3">Sportify</h1>
+    <h1 class="display-1 ">Sportify</h1>
     <p class="lead mb-3">Gamify Your Sports</p>
 
     <div class="col-lg-6 offset-lg-3">
@@ -21,7 +16,6 @@
         <button class="btn btn-primary" type="button">Go!</button>
       </span>
     </div>
-
     <!--carousel-->
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
@@ -31,21 +25,24 @@
       </ol>
       <div class="carousel-inner" role="listbox">
         <div class="carousel-item active">
-          <img src="pexels-photo.jpeg" alt="First slide">
+            <img th:src="@{/images/pexels-photo.jpeg}"
+                 src="../images/pexels-photo.jpeg" alt="First slide"/>
             <div class="carousel-caption">
             <h3>Track your workouts</h3>
             <p>Keep track of your efforts towards having a healthier life </p>
             </div>
         </div>
       <div class="carousel-item">
-        <img src="pexels-photo2.jpg" alt="Second slide">
+          <img th:src="@{/images/pexels-photo2.jpg}"
+               src="../images/pexels-photo2.jpg" alt="Second slide"/>
         <div class="carousel-caption">
           <h3>Increase motivation</h3>
           <p>Earn points by logging your workouts</p>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="pexels-photo-136410.jpeg" alt="Third slide">
+          <img th:src="@{/images/pexels-photo-136410.jpeg}"
+               src="../images/pexels-photo-136410.jpeg" alt="Third slide"/>
         <div class="carousel-caption">
           <h3>Stay fit</h3>
           <p>Gain bonus points for persistent logging</p>
@@ -61,15 +58,11 @@
     <span class="sr-only">Next</span>
     </a>
   </div>
+        <!--end carousel-->
   </div>
-</div>
-<div class="container-fluid footer navbar-fixed-bottom">
-  <p>&copy; Oskari Peltonen 2017</p>
-</div>
-
-    <!-- jQuery first, then Tether, then Bootstrap JS. -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
+  </div>
+  </div>
+ <div th:replace="layout :: footer"></div>
+ <div th:replace="layout :: scripts"></div>
   </body>
 </html>
