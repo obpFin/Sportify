@@ -1,22 +1,26 @@
 package sportify.model;
 
+import javax.persistence.*;
 import java.time.LocalDate;
 
 /**
  * Created by admin on 04/01/17.
  */
+@Entity
 public class Workout {
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private LocalDate date;
-    private String userName;
-    private Sports sport;
+    @ManyToOne
+    private User user;
+    private SportsEnum sport;
     int duration;
 
-    public Workout(int id, LocalDate date, String userName, Sports sport, int duration) {
+    public Workout(int id, LocalDate date, User user, SportsEnum sport, int duration) {
         this.id = id;
         this.date = date;
-        this.userName = userName;
+        this.user = user;
         this.sport = sport;
         this.duration = duration;
     }
@@ -37,19 +41,11 @@ public class Workout {
         this.date = date;
     }
 
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    public Sports getSport() {
+    public SportsEnum getSport() {
         return sport;
     }
 
-    public void setSport(Sports sport) {
+    public void setSport(SportsEnum sport) {
         this.sport = sport;
     }
 
