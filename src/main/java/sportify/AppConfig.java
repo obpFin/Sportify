@@ -1,15 +1,14 @@
-package com.oskaripeltonen.sportify.app;
+package sportify;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 
 /**
- * Created by admin on 30/12/16.
+ * Created by admin on 04/01/17.
  */
-
-@EnableAutoConfiguration
 @ComponentScan
+@EnableAutoConfiguration
 public class AppConfig {
 
     public static void main(String[] args) {

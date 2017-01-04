@@ -1,11 +1,11 @@
-package com.oskaripeltonen.sportify.app.controller;
+package sportify.controller;
 
-/**
- * Created by admin on 03/01/17.
- */
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+/**
+ * Created by admin on 04/01/17.
+ */
 @Controller
 public class AppController {
 
