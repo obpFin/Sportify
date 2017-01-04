@@ -24,5 +24,10 @@ dependencies {
     compile 'org.springframework.boot:spring-boot-starter-thymeleaf'
     compile 'org.webjars:bootstrap:4.0.0-alpha.5'
     compile 'org.webjars:jquery:2.1.4'
+    compile'org.hashids:hashids:1.0.1'
+    compile 'org.springframework:spring-orm:4.2.5.RELEASE'
+    compile 'org.hibernate:hibernate-core:5.2.1.Final'
+    compile 'org.apache.tomcat:tomcat-dbcp:8.0.32'
+    compile 'com.h2database:h2:1.4.191'
 
 }

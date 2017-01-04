@@ -1,3 +1,7 @@
-$('.btn-submit').click(function() {
-   document.location.href='/workout-submit';
+$(document).ready(function() {
+
+$('#subWorkout').click(function() {
+   window.location.href='/workout-submit';
+});
+
 });

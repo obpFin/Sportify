@@ -28,12 +28,5 @@ public class AppController {
         return "login";
     }
 
-    @RequestMapping("/workout")
-    public String workout(ModelMap modelMap) {
 
-        Workout workout = new Workout(1, LocalDate.of(2017,4,1), "username", Sports.GYM,50);
-        modelMap.put("workout",workout);
-
-        return "workout";
-    }
 }
