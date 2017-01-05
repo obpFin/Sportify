@@ -12,13 +12,9 @@ import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 
 import javax.sql.DataSource;
 
-/**
- * Created by admin on 04/01/17.
- */
 @Configuration
 @PropertySource("app.properties")
 public class DataConfig {
-
     @Autowired
     private Environment env;
 
@@ -31,19 +27,21 @@ public class DataConfig {
         sessionFactory.setDataSource(dataSource());
         return sessionFactory;
     }
+
     @Bean
     public DataSource dataSource() {
         BasicDataSource ds = new BasicDataSource();
 
-        //driver class name
+        // Driver class name
         ds.setDriverClassName(env.getProperty("sportify.db.driver"));
-        //set url
+
+        // Set URL
         ds.setUrl(env.getProperty("sportify.db.url"));
-        //set username and password
+
+        // Set username & password
         ds.setUsername(env.getProperty("sportify.db.username"));
         ds.setPassword(env.getProperty("sportify.db.password"));
 
         return ds;
     }
-
 }

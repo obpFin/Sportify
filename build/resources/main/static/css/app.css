@@ -1,0 +1,77 @@
+body {
+  background-color: #eff1f4;
+}
+
+.navbar {
+  background-color: #2e2b29;
+}
+
+.navbar-brand {
+  font-size: 34px;
+  padding-right: 2cm;
+}
+
+.nav-link {
+  font-size: 20px;
+}
+
+.navbar-nav > li > a {
+   line-height: 50px;
+}
+
+.form-inline {
+  line-height: 50px;
+}
+
+.row {
+  margin: 35px;
+}
+
+.item {
+  background-color: white;
+}
+
+.text {
+  color: black;
+}
+
+.input-group {
+    padding-bottom: 35px;
+}
+
+.left-col {
+
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size: cover;
+  border-radius: 25px;
+  padding: 20px;
+  height: 150px;
+  background-color:black;
+}
+
+.text-prim {
+  font-size: 38px;
+  color: white;
+}
+
+.text-sec {
+  font-size: 20px;
+  color: white;
+}
+
+.mid-col {
+  border-radius: 25px;
+  background-color: black;
+  padding: 20px;
+  font-size: 32px;
+}
+.canvas-photo {
+  width: 100%; display: block;
+  max-height: 100px;
+}
+
+.footer {
+position: absolute;
+bottom: 0;
+}
