@@ -35,10 +35,10 @@ public class DataConfig {
         // Driver class name
         ds.setDriverClassName(env.getProperty("sportify.db.driver"));
 
-        // Set URL
+        // connection URL
         ds.setUrl(env.getProperty("sportify.db.url"));
 
-        // Set username & password
+        //username & password
         ds.setUsername(env.getProperty("sportify.db.username"));
         ds.setPassword(env.getProperty("sportify.db.password"));
 
