@@ -6,5 +6,6 @@ Techniques used:
 - Bootstrap4
 - Hibernate
 - Thymeleaf
+- JQuery
 - Apache Tomcat
 - H2Database
