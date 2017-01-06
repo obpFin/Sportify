@@ -15,6 +15,7 @@ public class User {
     private int userId;
     private String userName;
     private int age;
+    private String location;
 
     @OneToMany(mappedBy = "user")
     private List<Workout> workouts = new ArrayList<>();
@@ -48,4 +49,18 @@ public class User {
     public void setAge(int age) {
         this.age = age;
     }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public List<Workout> getWorkouts() {
+        return workouts;
+    }
+
+ 
 }
