@@ -71,7 +71,31 @@ body {
   max-height: 100px;
 }
 
+.profile-box {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+}
+
+.row-centered {
+     text-align:center;
+     margin: auto;
+     position: absolute;
+     left: 0; right: 0;
+     padding:30px;
+}
+
+.col-centered {
+    display:inline-block;
+    float:none;
+    text-align:left;
+    margin-right:-4px;
+}
+
+col-text {
+  font-size:30px;
+}
+
 .footer {
-position: absolute;
-bottom: 0;
+  position: absolute;
+  bottom: 0;
 }

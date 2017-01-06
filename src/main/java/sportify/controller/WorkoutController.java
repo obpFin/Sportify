@@ -1,5 +1,7 @@
 package sportify.controller;
 
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,6 +15,9 @@ import java.time.LocalDate;
  */
 @Controller
 public class WorkoutController {
+
+    @Autowired
+    private SessionFactory sessionFactory;
 
     @RequestMapping("/workout")
     public String workout(ModelMap modelMap) {

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: head('login')">
+</head>
+<body>
+<nav th:replace="layout :: nav"></nav>
+<div class="container m-x-auto">
+
+    <div class="row row-centered col-sm-6 col-md-6 profile-box mt-3">
+        <div class="col-centered">
+            <h3>Name</h3>
+            <p class="col-text lead"></p>Location
+            <p class="col-text email lead"></p>Email
+            <p class="col-text points lead"></p>Total points
+        </div>
+    </div>
+
+</div>
+<div th:replace="layout :: footer"></div>
+<div th:replace="layout :: scripts"></div>
+</body>
+</html>
