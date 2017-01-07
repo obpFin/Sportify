@@ -5,18 +5,22 @@
  <body>
  <nav th:replace="layout :: nav"></nav>
   <div class="container text-xs-center">
-    <h1 class="display-1 ">Sportify</h1>
+    <h1 class="display-2 ">Sportify</h1>
     <p class="lead mb-3">Gamify Your Sports</p>
 
     <div class="col-lg-6 offset-lg-3">
     <div class="input-group">
-      <input type="text" class="form-control" placeholder="Type your name"/>
-      <span class="input-group-btn">
-        <button class="btn btn-primary" type="button">Go!</button>
-      </span>
+        <form th:action = "@{/profile}" method="post" th:object="${user}">
+         <input type="text" th:field="*{userName}" class="form-control mb-2 mr-sm-2 mb-sm-0" placeholder="Type your name"/>
+         <input type="number" th:field="*{age}" class="form-control mb-2 mr-sm-2 mb-sm-0" placeholder="Type your age"/>
+         <input type="text" th:field="*{location}" class="form-control mb-2 mr-sm-2 mb-sm-0" placeholder="Type your location"/>
+         <span class="input-group-btn">
+        <button class="btn btn-primary" type="submit">Submit</button>
+        </span>
+        </form>
     </div>
     <!--carousel-->
-    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <div id="carousel-example-generic" class="carousel slide mb-3" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
         <li data-target="#carousel-example-generic" data-slide-to="1"></li>

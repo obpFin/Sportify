@@ -20,10 +20,8 @@ public class User {
     @OneToMany(mappedBy = "user")
     private List<Workout> workouts = new ArrayList<>();
 
-    public User(int userId, String userName, int age) {
-        this.userId = userId;
-        this.userName = userName;
-        this.age = age;
+    public User() {
+
     }
 
     public int getUserId() {
@@ -62,5 +60,5 @@ public class User {
         return workouts;
     }
 
- 
+
 }

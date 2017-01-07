@@ -18,8 +18,7 @@
 
         <!-- Update the database schema (structure) on startup -->
         <property name="hbm2ddl.auto">update</property>
-        <property name="hibernate.current_session_context_class">
-            thread
-        </property>
+        <!--Use getCurrentSession method-->
+        <property name="hibernate.current_session_context_class">thread</property>
     </session-factory>
 </hibernate-configuration>
