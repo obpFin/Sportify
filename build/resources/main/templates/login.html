@@ -11,12 +11,12 @@
     <div class="col-lg-6 offset-lg-3">
     <div class="input-group">
         <form th:action = "@{/profile}" method="post" th:object="${user}">
-      <input type="text" th:field="*{userName}" class="form-control mb-2 mr-sm-2 mb-sm-0" placeholder="Type your name"/>
-      <input type="number" th:field="*{age}" class="form-control mb-2 mr-sm-2 mb-sm-0" placeholder="Type your age"/>
-      <input type="text" th:field="*{location}" class="form-control mb-2 mr-sm-2 mb-sm-0" placeholder="Type your location"/>
-      <span class="input-group-btn">
+         <input type="text" th:field="*{userName}" class="form-control mb-2 mr-sm-2 mb-sm-0" placeholder="Type your name"/>
+         <input type="number" th:field="*{age}" class="form-control mb-2 mr-sm-2 mb-sm-0" placeholder="Type your age"/>
+         <input type="text" th:field="*{location}" class="form-control mb-2 mr-sm-2 mb-sm-0" placeholder="Type your location"/>
+         <span class="input-group-btn">
         <button class="btn btn-primary" type="submit">Submit</button>
-      </span>
+        </span>
         </form>
     </div>
     <!--carousel-->

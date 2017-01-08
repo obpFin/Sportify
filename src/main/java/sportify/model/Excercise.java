@@ -7,21 +7,21 @@ import java.time.LocalDate;
  * Created by admin on 04/01/17.
  */
 @Entity
-public class Workout {
+public class Excercise {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private LocalDate date;
     @ManyToOne
     private User user;
-    private SportsEnum sport;
+    private ExcercisesEnum excerEnum;
     int duration;
 
-    public Workout(int id, LocalDate date, User user, SportsEnum sport, int duration) {
+    public Excercise(int id, LocalDate date, User user, ExcercisesEnum excerEnum, int duration) {
         this.id = id;
         this.date = date;
         this.user = user;
-        this.sport = sport;
+        this.excerEnum = excerEnum;
         this.duration = duration;
     }
 
@@ -41,12 +41,12 @@ public class Workout {
         this.date = date;
     }
 
-    public SportsEnum getSport() {
-        return sport;
+    public ExcercisesEnum getExcerEnum() {
+        return excerEnum;
     }
 
-    public void setSport(SportsEnum sport) {
-        this.sport = sport;
+    public void setSport(ExcercisesEnum sport) {
+        this.excerEnum = excerEnum;
     }
 
     public int getDuration() {

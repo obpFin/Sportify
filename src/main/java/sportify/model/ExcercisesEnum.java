@@ -3,7 +3,7 @@ package sportify.model;
 /**
  * Created by admin on 04/01/17.
  */
-public enum SportsEnum {
+public enum ExcercisesEnum {
 
     GYM(10),
     JOGGING(5),
@@ -15,7 +15,7 @@ public enum SportsEnum {
 
     private final int points;
 
-    SportsEnum(int points) {
+    ExcercisesEnum(int points) {
         this.points = points;
     }
 

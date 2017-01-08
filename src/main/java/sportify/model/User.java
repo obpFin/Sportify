@@ -18,7 +18,7 @@ public class User {
     private String location;
 
     @OneToMany(mappedBy = "user")
-    private List<Workout> workouts = new ArrayList<>();
+    private List<Excercise> excercises = new ArrayList<>();
 
     public User() {
 
@@ -56,8 +56,8 @@ public class User {
         this.location = location;
     }
 
-    public List<Workout> getWorkouts() {
-        return workouts;
+    public List<Excercise> getExcercises() {
+        return excercises;
     }
 
 
