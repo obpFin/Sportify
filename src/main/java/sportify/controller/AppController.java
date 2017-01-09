@@ -13,9 +13,6 @@ import sportify.service.UserService;
 @Controller
 public class AppController {
 
-    @Autowired
-    private UserService userService;
-
     @RequestMapping({"/", "/index"})
     public String homepage() {
 

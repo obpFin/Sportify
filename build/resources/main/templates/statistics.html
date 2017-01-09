@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: head('login')">
+</head>
+<body>
+<nav th:replace="layout :: nav"></nav>
+<div class="container m-x-auto">
+
+    <div class="row row-centered col-sm-6 col-md-6 profile-box mt-3">
+        <div class="col-centered">
+            <h3>Sportify statistics</h3>
+            <p class="col-text lead"></p>Total users
+            <p class="col-text lead"></p>Total time logged by users
+            <p class="col-text lead"></p>Top exercise
+            <p class="col-text lead"></p>
+        </div>
+    </div>
+
+</div>
+<div th:replace="layout :: footer"></div>
+<div th:replace="layout :: scripts"></div>
+</body>
+</html>
