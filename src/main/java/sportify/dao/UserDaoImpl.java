@@ -26,8 +26,7 @@ public class UserDaoImpl implements UserDao{
     public User findById(int id) {
         Session session = sessionFactory.getCurrentSession();
         try {
-            User user = (User) session.get(User.class, id);
-            System.out.println(user.getUserId() + " - " + user.getUserName());
+            User user = (User)session.get(User.class, id);
             session.getTransaction().commit();
             return user;
         }

@@ -7,13 +7,13 @@
   <div class="container text-xs-center">
     <h1 class="display-2 ">Sportify</h1>
     <p class="lead mb-3">Gamify Your Sports</p>
-
+    <!-- Form -->
     <div class="col-lg-6 offset-lg-3">
     <div class="input-group">
-        <form th:action = "@{/profile}" method="post" th:object="${user}">
-         <input type="text" th:field="*{userName}" class="form-control mb-2 mr-sm-2 mb-sm-0" placeholder="Type your name"/>
-         <input type="number" th:field="*{age}" class="form-control mb-2 mr-sm-2 mb-sm-0" placeholder="Type your age"/>
-         <input type="text" th:field="*{location}" class="form-control mb-2 mr-sm-2 mb-sm-0" placeholder="Type your location"/>
+        <form th:action = "@{/profile}" method="post" th:object="${user}" name="registration">
+         <input type="text" th:field="*{userName}" name="username" class="form-control mb-2 mr-sm-2 mb-sm-0" placeholder="Type your name"/>
+         <input type="number" th:field="*{age}" name="age" class="form-control mb-2 mr-sm-2 mb-sm-0" placeholder="Type your age"/>
+         <input type="text" th:field="*{location}" name="location" class="form-control mb-2 mr-sm-2 mb-sm-0" placeholder="Type your location"/>
          <span class="input-group-btn">
         <button class="btn btn-primary" type="submit">Submit</button>
         </span>
@@ -66,5 +66,6 @@
   </div>
  <div th:replace="layout :: footer"></div>
  <div th:replace="layout :: scripts"></div>
+ <script src="js/form-validation.js"></script>
   </body>
 </html>
