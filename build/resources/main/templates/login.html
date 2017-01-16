@@ -10,6 +10,7 @@
     <!-- Form -->
     <div class="col-lg-6 offset-lg-3">
     <div class="input-group">
+        <div th:replace="layout :: flash"></div>
         <form th:action = "@{/profile}" method="post" th:object="${user}" name="registration">
          <input type="text" th:field="*{username}" name="username" class="form-control mb-2 mr-sm-2 mb-sm-0" placeholder="Type your name"/>
             <input type="text" th:field="*{password}" name="username" class="form-control mb-2 mr-sm-2 mb-sm-0" placeholder="Type your password"/>
