@@ -1,28 +1,50 @@
 package sportify.model;
 
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
 import javax.persistence.*;
+import javax.validation.constraints.Size;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 /**
  * Created by admin on 04/01/17.
  */
 @Entity
-public class User {
+public class User implements UserDetails {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int userId;
-    private String userName;
+
+    @Column(unique = true)
+    @Size(min = 5, max = 20)
+    private String username;
+
+    @Column(length = 100)
+    private String password;
+
+    @Column
     private int age;
+
+    @Column
+    @Size(min = 4,max = 25)
     private String location;
+
+    @Column
+    private boolean enabled;
+
+    @OneToOne
+    @JoinColumn(name = "role_id")
+    private Role role;
 
     @OneToMany(mappedBy = "user")
     private List<Excercise> excercises = new ArrayList<>();
 
-    public User() {
-
-    }
+    public User(){}
 
     public int getUserId() {
         return userId;
@@ -32,12 +54,17 @@ public class User {
         this.userId = userId;
     }
 
-    public String getUserName() {
-        return userName;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public String getPassword() {
+        return password;
+    }
+
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public int getAge() {
@@ -58,6 +85,39 @@ public class User {
 
     public List<Excercise> getExcercises() {
         return excercises;
+    }
+
+    //Implemented methods
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        List<GrantedAuthority> authorities = new ArrayList<>();
+        authorities.add(new SimpleGrantedAuthority(role.getName()));
+        return authorities;
+    }
+
+    @Override
+    public String getUsername() {
+        return username;
+    }
+
+    @Override
+    public boolean isAccountNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return true;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return enabled;
     }
 
 
