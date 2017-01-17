@@ -3,11 +3,22 @@
 <head th:replace="layout :: head('login')">
 </head>
  <body>
- <nav th:replace="layout :: nav"></nav>
+ <!-- log in -->
+ <div class='navbar'>
+     <div class='navbar-inner'>
+         <form class="navbar-search pull-right">
+             <input type="text" class="span2" placeholder="Login"/>
+             <input type="text" class="span2" placeholder="Password"/>
+             <input type="submit" value="Login" class="btn"/>
+         </form>
+     </div>
+ </div>
+ <!-- end log in-->
   <div class="container text-xs-center">
     <h1 class="display-2 ">Sportify</h1>
     <p class="lead mb-3">Gamify Your Sports</p>
-    <!-- Form -->
+
+    <!-- sign in -->
     <div class="col-lg-6 offset-lg-3">
     <div class="input-group">
         <div th:replace="layout :: flash"></div>
@@ -20,7 +31,9 @@
         <button class="btn btn-primary" type="submit">Submit</button>
         </span>
         </form>
+        <p>or</p>
     </div>
+
     <!--carousel-->
     <div id="carousel-example-generic" class="carousel slide mb-3" data-ride="carousel">
       <ol class="carousel-indicators">

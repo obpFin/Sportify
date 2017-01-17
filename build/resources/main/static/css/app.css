@@ -2,7 +2,7 @@ body {
   background-color: #eff1f4;
 }
 
-.navbar {
+#navbar {
   background-color: #2e2b29;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
