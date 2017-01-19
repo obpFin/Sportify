@@ -4,34 +4,33 @@
 </head>
  <body>
  <!-- log in -->
- <div class='navbar'>
-     <div class='navbar-inner'>
-         <form class="navbar-search pull-right">
-             <input type="text" class="span2" placeholder="Login"/>
-             <input type="text" class="span2" placeholder="Password"/>
-             <input type="submit" value="Login" class="btn"/>
-         </form>
-     </div>
- </div>
- <!-- end log in-->
-  <div class="container text-xs-center">
-    <h1 class="display-2 ">Sportify</h1>
-    <p class="lead mb-3">Gamify Your Sports</p>
+<div class='navbar'>
+    <div class='navbar-inner'>
+        <form action="@{/login}" th:object="${user}" method="post" class="navbar-search pull-right" name="login">
+            <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+            <input type="text" th:field="*{username}" class="span2" placeholder="Username"/>
+            <input type="password" th:field="*{password}" class="span2" placeholder="Password"/>
+            <input type="submit" value="Login" class="btn btn-primary"/>
+        </form>
+    </div>
+</div>
+<div class="container text-xs-center">
+   <h1 class="display-2 ">Sportify</h1>
+   <p class="lead mb-3">Gamify Your Sports</p>
 
     <!-- sign in -->
     <div class="col-lg-6 offset-lg-3">
     <div class="input-group">
         <div th:replace="layout :: flash"></div>
         <form th:action = "@{/profile}" method="post" th:object="${user}" name="registration">
-         <input type="text" th:field="*{username}" name="username" class="form-control mb-2 mr-sm-2 mb-sm-0" placeholder="Type your name"/>
-            <input type="text" th:field="*{password}" name="username" class="form-control mb-2 mr-sm-2 mb-sm-0" placeholder="Type your password"/>
+            <input type="text" th:field="*{username}" name="username" class="form-control mb-2 mr-sm-2 mb-sm-0" placeholder="Type your name"/>
+            <input type="text" th:field="*{password}" name="password" class="form-control mb-2 mr-sm-2 mb-sm-0" placeholder="Type your password"/>
             <input type="number" th:field="*{age}" name="age" class="form-control mb-2 mr-sm-2 mb-sm-0" placeholder="Type your age"/>
          <input type="text" th:field="*{location}" name="location" class="form-control mb-2 mr-sm-2 mb-sm-0" placeholder="Type your location"/>
          <span class="input-group-btn">
         <button class="btn btn-primary" type="submit">Submit</button>
         </span>
         </form>
-        <p>or</p>
     </div>
 
     <!--carousel-->
@@ -78,9 +77,9 @@
   </div>
         <!--end carousel-->
   </div>
-  </div>
+ </div>
  <div th:replace="layout :: footer"></div>
  <div th:replace="layout :: scripts"></div>
  <script src="js/form-validation.js"></script>
-  </body>
+ </body>
 </html>

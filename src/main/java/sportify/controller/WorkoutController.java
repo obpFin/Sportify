@@ -12,8 +12,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class WorkoutController {
 
-    @Autowired
-    private SessionFactory sessionFactory;
 
     @RequestMapping("/workout")
     public String workout(ModelMap modelMap) {

@@ -17,12 +17,7 @@ public class Excercise {
     private ExcercisesEnum excerEnum;
     int duration;
 
-    public Excercise(int id, LocalDate date, User user, ExcercisesEnum excerEnum, int duration) {
-        this.id = id;
-        this.date = date;
-        this.user = user;
-        this.excerEnum = excerEnum;
-        this.duration = duration;
+    public Excercise() {
     }
 
     public int getId() {
