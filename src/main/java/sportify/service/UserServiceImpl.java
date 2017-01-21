@@ -8,6 +8,8 @@ import org.springframework.stereotype.Service;
 import sportify.dao.UserDao;
 import sportify.model.User;
 
+import java.io.Console;
+
 /**
  * Created by admin on 06/01/17.
  */

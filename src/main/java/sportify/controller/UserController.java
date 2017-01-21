@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import sportify.model.User;
 import sportify.service.UserService;
 
+import javax.validation.Valid;
+
 /**
  * Created by admin on 06/01/17.
  */

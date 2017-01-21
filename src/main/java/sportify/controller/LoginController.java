@@ -16,10 +16,10 @@ public class LoginController {
 
 
     @RequestMapping("/login")
-    public String login(Model model, HttpServletRequest request) {
+    public String login(Model model) {
 
         model.addAttribute("user", new User());
-
+/*
         try {
             Object flash = request.getSession().getAttribute("flash");
             //add message to modelmap and remove it from the session
@@ -27,8 +27,11 @@ public class LoginController {
             request.getSession().removeAttribute("flash");
         } catch (Exception ex) {
         }
+        */
         return "login";
     }
+
+
 
     @RequestMapping("/access_denied")
     public String accessDenied() {

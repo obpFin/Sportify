@@ -87,6 +87,14 @@ public class User implements UserDetails {
         return excercises;
     }
 
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
+
     //Implemented methods
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
